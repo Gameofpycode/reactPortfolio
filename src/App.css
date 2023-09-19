@@ -1,0 +1,283 @@
+*{
+  padding: 0;margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+.menu{
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(68, 56, 235);
+  padding: 20px;
+}
+.menu .menu-right{
+  display: flex;
+  gap: 15px;
+  list-style: none;
+
+}
+.menu .menu-right li {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(255, 196, 0); */
+  /* background: none; */
+  border:2px solid gold;
+  /* border-radius: 5px;  */
+}
+.menu-right li:hover{
+transform: scale(1.1);
+transition: 1s;
+}
+.menu .menu-right li a{
+  text-decoration: none;
+  color: rgb(40, 37, 219);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color:gold;
+  /* font-weight: 600; */
+  font-size: 1.2em;
+
+}
+/* //////////////////////// */
+/* home section */
+
+#home_page{
+  width: 100vw;
+  height: 100vh;
+  /* background-color: gold; */
+}
+.container{
+  width: 100%;
+  height: 100%;
+  /* background-color: gold; */
+  position: relative;
+  
+}
+.home_right{
+  width: 50%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 255, 0.308); */
+  display: flex;
+  gap: 10px;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+.square_up{
+  width: 50%;
+  height: 50%;
+  background-color: rgb(67, 67, 201);
+  position: absolute;
+  right: -100px;
+  top: -50px;
+  transform: rotate(45deg);
+  border-radius: 40px;
+}
+.square_down{
+  width: 100%;
+  height: 80%;
+  background-color: blue;
+  position: absolute;
+  right: -200px;
+  bottom: -300px;
+  /* transform-origin: right; */
+  transform: rotate(-45deg);
+  
+}
+.square_center{
+  width: 45%;
+  height: 50%;
+  /* background:url("https://img.freepik.com/free-photo/cheerful-young-caucasian-businessman_171337-727.jpg?w=996&t=st=1695102363~exp=1695102963~hmac=4cb41a6ddd460b47b71c48259b73c033130a517b06db037cc0611a334e9a0025"); */
+  z-index: 2;
+  transform: rotate(45deg);
+  position: relative;
+  right: -200px;
+  top: -70px;
+  border: 20px solid gold;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.square_center img{
+  width: 700px;
+  height: 450px;
+  rotate: -45deg;
+  /* object-fit: cover; */
+  position: relative;
+  top:  -40px;
+  left: -200px;
+  position: center;
+}
+.home_right .home_psd{
+  width:80%;
+  min-height: 80%;
+  position: absolute;
+  top: 5px;
+  right: -50px;
+  /* background-color: rgba(0, 128, 0, 0.39); */
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 20;
+  border-radius: 50%;
+  border-left: 5px solid #fff;
+
+
+  
+
+}
+.home_psd .img{
+  width: 60px;
+  height: 60px;
+  background-color: rgb(0, 140, 255);
+  position:relative;
+  /* left: -200px; */
+  z-index: 10; 
+  border-radius: 50%;
+}
+.img:nth-child(1){
+  left: 140px;
+  top: -45px;
+  animation: anim 10s linear infinite;
+  /* background:url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F61%2FHTML5_logo_and_wordmark.svg%2F800px-HTML5_logo_and_wordmark.svg.png&tbnid=-K5A6XCBbOKlJM&vet=12ahUKEwipkNmIkbaBAxVz6DgGHWf2AgsQMygAegQIARB0..i&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHTML5&docid=2AEvv71Lwr2JSM&w=800&h=800&q=html%20images&ved=2ahUKEwipkNmIkbaBAxVz6DgGHWf2AgsQMygAegQIARB0"); */
+  z-index: 50;
+}
+.img:nth-child(2){
+  left: 60px;
+  top: -60px;
+  animation: anim 10s linear infinite;
+  animation-delay: 0.5s;
+}
+.img:nth-child(3){
+  left: -5px;
+  top: -50px;
+  animation: anim 10s linear infinite;
+  animation-delay: 0.2s;
+}
+.img:nth-child(4){
+  left: -30px;
+  top: -20px;
+  animation: anim 10s linear infinite;
+  animation-delay: 0.6s;
+}
+.img:nth-child(5){
+  left: -20px;
+  animation: anim 10s linear infinite;
+  animation-delay: 0.1s;
+}
+.img:nth-child(6){
+  left: 15px;
+  top: 20px;
+  animation: anim 10s linear infinite;
+  animation-delay: 0.4s;
+}
+.img:nth-child(7){
+  left: 90px;
+  top: 20px;
+  animation: anim 10s linear infinite;
+  animation-delay: 0.5s;
+}
+.hireme{
+  /* min-height: 300px; */
+  width: 100px;
+  /* background-color: blueviolet; */
+  z-index: 30;
+  overflow: hidden;
+  position: absolute;
+  right: 25%;
+  top: 20%;
+}
+marquee{
+ 
+  z-index: 30;
+  transform: rotate(90deg);
+  width: 200px;
+  height: 500px;
+}
+.home_psd .img:hover{
+
+  animation: none;
+  transition: 4s;
+}
+
+@keyframes anim{
+  0%{
+    transform: translate(20px);
+    transform: scale(1.2);   
+  }
+  20%{
+    transform: translate(-40px);
+  }
+  40%{
+    transform: translateY(10px);
+  }
+  60%{
+    transform: translateX(30px);
+    transform: scale(1.2);
+  }
+  80%{
+    transform: translateX(-40px);
+  }
+  100%{
+    transform: translate(0px);
+    transform: scale(1.2);
+  }
+}
+
+/* ////////////////////////////////// */
+/* home left */
+.home_left{
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: red; */
+  position: relative;
+  /* top:100px; */
+  left: 100px;
+}
+.left_home_body{
+  height: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+  gap: 20px;
+}
+
+.home_left .heading h1{
+  font-size: 3em;
+}
+.text_list{
+  color: blue;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.text_list li{
+  font-size: 20px;
+  margin: 20px;
+  
+}
+.btns button{
+  width: 150px;
+  height: 40px;
+  margin-left: 10px;
+  font-size: 1em;
+
+}
