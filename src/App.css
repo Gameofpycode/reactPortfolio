@@ -22,8 +22,8 @@ body{
 
 }
 .menu .menu-right li {
-  width: 150px;
-  height: 50px;
+  width: 130px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,6 +35,8 @@ body{
 .menu-right li:hover{
 transform: scale(1.1);
 transition: 1s;
+background-color: yellow;
+color: blue;
 }
 .menu .menu-right li a{
   text-decoration: none;
@@ -46,19 +48,27 @@ transition: 1s;
   font-size: 1.2em;
 
 }
+.menu .menu-right li a:hover{
+  color: blue;
+
+}
 /* //////////////////////// */
 /* home section */
 
 #home_page{
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
   /* background-color: gold; */
 }
 .container{
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height:100vh;
+  background: linear-gradient( gold ,yellow,#fff,gold,yellow);
   /* background-color: gold; */
   position: relative;
+  animation: gradientFlow 1s infinite;
+  overflow-x: hidden;
   
 }
 .home_right{
@@ -78,7 +88,7 @@ transition: 1s;
 .square_up{
   width: 50%;
   height: 50%;
-  background-color: rgb(67, 67, 201);
+  background-color: rgb(75, 75, 243);
   position: absolute;
   right: -100px;
   top: -50px;
@@ -88,7 +98,7 @@ transition: 1s;
 .square_down{
   width: 100%;
   height: 80%;
-  background-color: blue;
+  background-color: rgb(75, 75, 243);
   position: absolute;
   right: -200px;
   bottom: -300px;
@@ -240,7 +250,7 @@ marquee{
 /* ////////////////////////////////// */
 /* home left */
 .home_left{
-  width: 50%;
+  width: 60%;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -264,10 +274,15 @@ marquee{
 .home_left .heading h1{
   font-size: 3em;
 }
+.home_left .text{
+  list-style-type: none;
+
+}
 .text_list{
-  color: blue;
-  font-weight: 600;
+  color: rgb(39, 39, 78);
+  /* font-weight: bold; */
   letter-spacing: 1px;
+  list-style-image: url();
 }
 .text_list li{
   font-size: 20px;
@@ -281,3 +296,145 @@ marquee{
   font-size: 1em;
 
 }
+
+/* register */
+.register{
+  width: 95%;
+  height: 130px;
+  position: relative;
+  z-index: 100;
+  background-color:  rgb(75, 75, 243);
+
+  overflow: hidden;
+  
+  left: 2.5%;
+}
+.register .row{
+  width: 100%;
+  height: fit-content;
+  /* min-height: fit-content; */
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 10px;
+  gap: 20px;
+  overflow: hidden;
+  /* margin-bottom: 5px; */
+  /* background-color: red; */
+}
+.col-btn{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100%; */
+}
+.card{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* gap:px; */
+  border: 1px solid blue;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  padding: 10px;
+  position: relative;
+}
+.card::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(rgb(75, 75, 243),rgb(60, 57, 238),rgb(75, 75, 243),blue,rgb(78, 78, 221)) ;
+  position: absolute;
+  animation: gradientFlow infinite;
+
+}
+.register .card input, .register .card select{
+  width: 100%;
+  padding: 10px !important;
+  border-radius: 0;
+  margin-top: 2px;
+  border: none;
+  outline: none;
+  background-color: rgba(239, 243, 32, 0.835);
+  border-radius: 10px;
+}
+.register .torch{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: -20px;
+  top: 60px;
+  /* background-color: rebeccapurple; */
+  z-index: 3;
+
+}
+
+
+.register .card:hover::before{
+  /* background: black; */
+  transform:translateX(100%);
+  transition: 1s;
+ 
+  
+}
+.register .card:hover{
+  animation: registercard-anim 1s linear ;
+}
+
+.register button{
+
+   width: 150px;
+  height: 37px; 
+  /* padding: 15px; */
+  margin-top: 17px;
+  
+  background-color:  rgb(75, 75, 243);
+  color: gold;
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 10px;
+}
+.register button:hover{
+  background-color: rgb(238, 220, 63);
+  color: rgb(75, 75, 243);
+  transform: scale(0.9);
+  transition: 1s;
+
+}
+.form-label{
+  color: #5912c4;
+  font-size: 1em;
+  margin-left: 5px;
+}
+.from-group{
+  margin-bottom: 2px;
+}
+.register .card input:focus, .register .card select:focus{
+  box-shadow: none;
+  border: 2px solid #6609f1;
+}
+.register .text-center{
+  font-size: 1em;
+  /* margin-top: 10px; */
+  font-weight: 500;
+  color: rgb(75, 75, 243);
+}
+
+@keyframes gradientFlow {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+} 
+
+
+
